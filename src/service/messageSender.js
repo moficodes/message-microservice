@@ -17,8 +17,6 @@ function login() {
 }
 
 function sendMessage(recipient, message) {
-  console.log(recipient);
-  console.log(message);
   return platform.post('/restapi/v1.0/account/~/extension/~/sms', {
     from: { phoneNumber: Config.ACCOUNT_ID },
     to: [{ phoneNumber: recipient }],
